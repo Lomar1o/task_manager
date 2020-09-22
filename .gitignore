@@ -4,3 +4,4 @@ __pycache__
 manager1.data
 database.db
 env
+dmanager.data
