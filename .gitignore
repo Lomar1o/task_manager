@@ -3,3 +3,4 @@ __pycache__
 .idea
 manager1.data
 database.db
+env

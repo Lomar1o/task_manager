@@ -1,6 +1,5 @@
 import argparse
 from file import FileJson, FileSQL, convert_date
-from file import FileJson, FileSQL
 
 
 if __name__ == '__main__':
@@ -17,9 +16,8 @@ if __name__ == '__main__':
     # В зависимости от пользовательского ввода, выбираем, где хранить данные
     if args.database == 'Json' or not args.database:
         writer = FileJson()
-        print(f'Данные успешно занесены в журнал')
     elif args.database == 'SQL':
         writer = FileSQL()
-        print(f'Данные успешно занесены в журнал')
-    writer.write_to_database(args.task, args.date)
 
+    writer.write_to_database(args.date, args.task)
+    print(f'Данные успешно занесены в журнал')
